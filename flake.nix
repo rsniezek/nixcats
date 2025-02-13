@@ -173,6 +173,7 @@
           { plugin = mini-indentscope; name = "mini.indentscope"; }
           { plugin = mini-pairs; name = "mini.pairs"; }
           { plugin = mini-surround; name = "mini.surround"; }
+          { plugin = kanagawa-nvim; name = "kanagawa.nvim"; }
           # you could do this within the lazy spec instead if you wanted
           # and get the new names from `:NixCats pawsible` debug command
         ];
