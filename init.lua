@@ -59,5 +59,6 @@ require('nixCatsUtils.lazyCat').setup(nixCats.pawsible { 'allPlugins', 'start', 
 }, lazyOptions)
 
 vim.cmd.colorscheme 'kanagawa-wave'
+vim.g.autoformat = false
 
 --RADEK test comment change
