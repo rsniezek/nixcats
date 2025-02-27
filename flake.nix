@@ -155,6 +155,16 @@
           snacks-nvim
           nvim-treesitter-textobjects
           nvim-treesitter.withAllGrammars
+          blink-cmp
+          CopilotChat-nvim
+          blink-cmp-copilot
+          cmake-tools-nvim
+          copilot-lua
+          yanky-nvim
+          nvim-dap
+          nvim-dap-ui
+          nvim-dap-go
+          nvim-dap-python
           # This is for if you only want some of the grammars
           # (nvim-treesitter.withPlugins (
           #   plugins: with plugins; [
@@ -249,20 +259,6 @@
         };
         # and a set of categories that you want
         # (and other information to pass to lua)
-        categories = {
-          general = true;
-          test = false;
-        };
-        extra = {};
-      };
-      # an extra test package with normal lua reload for fast edits
-      # nix doesnt provide the config in this package, allowing you free reign to edit it.
-      # then you can swap back to the normal pure package when done.
-      testnvim = { pkgs, mkNvimPlugin, ... }: {
-        settings = {
-          wrapRc = false;
-          unwrappedCfgPath = "/absolute/path/to/config";
-        };
         categories = {
           general = true;
           test = false;
