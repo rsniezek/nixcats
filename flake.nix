@@ -65,8 +65,11 @@
           lua-language-server
           nil # I would go for nixd but lazy chooses this one idk
           stylua
+          shfmt
           nixd
           lldb
+          black
+          isort
           python314
           texliveMedium
         ];
@@ -103,7 +106,6 @@
           neodev-nvim
           noice-nvim
           nui-nvim
-          nvim-cmp
           nvim-lint
           nvim-lspconfig
           nvim-notify
@@ -115,8 +117,6 @@
           nvim-web-devicons
           persistence-nvim
           plenary-nvim
-          telescope-fzf-native-nvim
-          telescope-nvim
           todo-comments-nvim
           tokyonight-nvim
           trouble-nvim
@@ -132,16 +132,9 @@
           cmake-tools-nvim
           copilot-lua
           yanky-nvim
-          nvim-dap
-          nvim-dap-ui
-          nvim-dap-go
-          nvim-dap-lldb
-          nvim-dap-python
-          mason-nvim-dap-nvim
 
           # sometimes you have to fix some names
           { plugin = luasnip; name = "LuaSnip"; }
-          { plugin = catppuccin-nvim; name = "catppuccin"; }
           { plugin = mini-ai; name = "mini.ai"; }
           { plugin = mini-icons; name = "mini.icons"; }
           { plugin = mini-bufremove; name = "mini.bufremove"; }
