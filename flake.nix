@@ -132,6 +132,7 @@
           cmake-tools-nvim
           copilot-lua
           yanky-nvim
+          devdocs-nvim
 
           # sometimes you have to fix some names
           { plugin = luasnip; name = "LuaSnip"; }
