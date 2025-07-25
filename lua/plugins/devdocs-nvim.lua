@@ -41,6 +41,34 @@ return {
       '<cmd>DevDocs delete<cr>',
       desc = 'Delete Devdoc',
     },
+    {
+      '<leader>is',
+      mode = 'n',
+      function()
+        local devdocs = require 'devdocs'
+        local symbol = vim.fn.expand('<cword>')
+        local installedDocs = devdocs.GetInstalledDocs()
+        local Snacks = require 'snacks'
+        local matches = {}
+
+        for _, doc in ipairs(installedDocs) do
+          local docDir = devdocs.GetDocDir(doc)
+          -- You may want to implement a smarter search here
+          -- For now, just collect all docs for manual selection
+          table.insert(matches, { doc = doc, dir = docDir })
+        end
+
+        vim.ui.select(matches, {
+          prompt = 'Select documentation for ' .. symbol,
+          format_item = function(item) return item.doc end,
+        }, function(selected)
+          if selected then
+            Snacks.picker.files { cwd = selected.dir }
+          end
+        end)
+      end,
+      desc = 'Search DevDocs for symbol under cursor in installed docs',
+    },
   },
   opts = {
     ensure_installed = {
