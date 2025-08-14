@@ -68,6 +68,8 @@
           shfmt
           nixd
           lldb
+          glslls
+          glsl_analyzer
           black
           isort
           python314
